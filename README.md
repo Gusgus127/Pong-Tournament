@@ -8,9 +8,13 @@ The DQN agent learns an action-value function using a convolutional neural netwo
 
 Both agents are evaluated after training in the same environment, and their performance is compared using episode rewards and observed gameplay behavior.
 
+Part 2: Atari Reinforcement Learning with Stable-Baselines3
 
+This part of the project focuses on training reinforcement learning agents in Atari environments using Stable-Baselines3. The goal is to leverage well-established implementations of reinforcement learning algorithms and compare their behavior with custom implementations from earlier parts of the project.
 
+The experiments use Gymnasium Atari environments with standard preprocessing and wrappers to ensure stable training and consistent observations. Different algorithms provided by Stable-Baselines3 are trained and evaluated under the same conditions.
 
+Agent performance is assessed using episode rewards and training curves. This part emphasizes practical aspects of reinforcement learning, such as algorithm selection, training stability, and reproducibility when using high-level reinforcement learning libraries.
 
 Part 3: Multi-Agent Atari – PettingZoo and Stable-Baselines3
 
