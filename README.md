@@ -1,4 +1,5 @@
 Part 1: Solving the Pong Environment
+
 This part of the project implements and compares two reinforcement learning approaches, Deep Q-Networks (DQN) and REINFORCE, in the Atari Pong environment. The objective is to analyze the differences between a value-based and a policy-based method under the same experimental conditions.
 
 The PongNoFrameskip-v4 environment from Gymnasium is used with standard Atari preprocessing, including frame skipping, grayscale conversion, resizing, frame stacking, and reward clipping. This ensures stable training and consistent observations for both agents.
