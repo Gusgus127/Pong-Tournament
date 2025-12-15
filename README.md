@@ -1,4 +1,4 @@
-Part 1: Solving the Pong Environment
+## Part 1: Solving the Pong Environment
 
 This part of the project implements and compares two reinforcement learning approaches, Deep Q-Networks (DQN) and REINFORCE, in the Atari Pong environment. The objective is to analyze the differences between a value-based and a policy-based method under the same experimental conditions.
 
@@ -8,20 +8,44 @@ The DQN agent learns an action-value function using a convolutional neural netwo
 
 Both agents are evaluated after training in the same environment, and their performance is compared using episode rewards and observed gameplay behavior.
 
-Part 2: Pong World Tournament
+## Part 2: Pong World Tournament
+Part 2 focuses on **multi-agent reinforcement learning** using the
+**PettingZoo** framework and its **AEC (Agent Environment Cycle) API**.
+The goal is to train an agent capable of competing in a Pong tournament against
+other agents.
 
-This part of the project focuses on training reinforcement learning agents in Atari environments using Stable-Baselines3. The goal is to leverage well-established implementations of reinforcement learning algorithms and compare their behavior with custom implementations from earlier parts of the project.
+Training is performed using **Stable-Baselines3 (PPO)** in a single-agent
+Gymnasium Pong environment for efficiency and stability. The trained policy is
+then transferred to the **PettingZoo Pong environment**, where it controls one
+paddle in a two-player setting.
 
-The experiments use Gymnasium Atari environments with standard preprocessing and wrappers to ensure stable training and consistent observations. Different algorithms provided by Stable-Baselines3 are trained and evaluated under the same conditions.
+Preprocessing and observation transformations are applied using **SuperSuit**
+to ensure consistency between the training and evaluation environments.
+The agent is evaluated against a random opponent over multiple episodes,
+reporting win rates, rewards, and gameplay videos, and is fully compatible
+with the Pong World Tournament setup.
 
-Agent performance is assessed using episode rewards and training curves. This part emphasizes practical aspects of reinforcement learning, such as algorithm selection, training stability, and reproducibility when using high-level reinforcement learning libraries.
+## Part 3: Solving a "complex" ALE environment
 
-Part 3: Solving a "complex" ALE environment
+In Part 3, we address a more complex single-agent Atari environment,
+**MsPacmanNoFrameskip-v4**, using the **ALE Gymnasium** interface.
 
-This part of the project explores multi-agent reinforcement learning in Atari environments using the PettingZoo framework. The objective is to extend single-agent reinforcement learning to a multi-agent setting and analyze how agents interact and learn within a shared environment.
+Multiple deep reinforcement learning algorithms (**PPO, DQN, and A2C**) are
+trained and compared using **Stable-Baselines3**. Standard Atari preprocessing
+and frame stacking are applied, and vectorized environments are used to improve
+training efficiency.
 
-The environment is built using PettingZoo’s Atari interfaces, with ALE as the backend. Standard preprocessing and environment transformations are applied using SuperSuit to ensure compatibility with learning algorithms and consistent observation spaces.
+Models are trained with carefully selected hyperparameters, evaluated periodically,
+and compared using learning curves, average episode rewards, and recorded gameplay
+videos. The results are analyzed to assess training stability, sample efficiency,
+and final performance, and to justify the selection of the best-performing model
+for this environment.
 
-Training is performed using Stable-Baselines3, adapting single-agent algorithms to the multi-agent setup through environment wrappers. Agents are trained and evaluated based on episode rewards and observed interaction dynamics. Experiment tracking and logging are optionally handled using Weights & Biases (wandb).
+---
 
-This part highlights the challenges and differences between single-agent and multi-agent reinforcement learning, particularly in terms of environment design, training stability, and coordination.
+## Reproducibility
+
+Each part of the project includes:
+- Well-documented source code
+- Saved models 
+- Visualization of learning curves and agent behavior
