@@ -1,5 +1,4 @@
-Part 1: Pong Tournament – DQN and REINFORCE
-
+Part 1: Solving the Pong Environment
 This part of the project implements and compares two reinforcement learning approaches, Deep Q-Networks (DQN) and REINFORCE, in the Atari Pong environment. The objective is to analyze the differences between a value-based and a policy-based method under the same experimental conditions.
 
 The PongNoFrameskip-v4 environment from Gymnasium is used with standard Atari preprocessing, including frame skipping, grayscale conversion, resizing, frame stacking, and reward clipping. This ensures stable training and consistent observations for both agents.
@@ -8,7 +7,7 @@ The DQN agent learns an action-value function using a convolutional neural netwo
 
 Both agents are evaluated after training in the same environment, and their performance is compared using episode rewards and observed gameplay behavior.
 
-Part 2: Atari Reinforcement Learning with Stable-Baselines3
+Part 2: Pong World Tournament
 
 This part of the project focuses on training reinforcement learning agents in Atari environments using Stable-Baselines3. The goal is to leverage well-established implementations of reinforcement learning algorithms and compare their behavior with custom implementations from earlier parts of the project.
 
@@ -16,7 +15,7 @@ The experiments use Gymnasium Atari environments with standard preprocessing and
 
 Agent performance is assessed using episode rewards and training curves. This part emphasizes practical aspects of reinforcement learning, such as algorithm selection, training stability, and reproducibility when using high-level reinforcement learning libraries.
 
-Part 3: Multi-Agent Atari – PettingZoo and Stable-Baselines3
+Part 3: Solving a "complex" ALE environment
 
 This part of the project explores multi-agent reinforcement learning in Atari environments using the PettingZoo framework. The objective is to extend single-agent reinforcement learning to a multi-agent setting and analyze how agents interact and learn within a shared environment.
 
